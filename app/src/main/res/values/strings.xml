@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Zingmp3</string>
+    <string name="playlist">Playlist</string>
+    <string name="search">Tìm kiếm bài hát, MV, playlist,Album, Nghệ sĩ</string>
+</resources>
