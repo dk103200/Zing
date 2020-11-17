@@ -7,4 +7,12 @@
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+    <color name="song">#0693FD</color>
+    <color name="upload">#FD471D</color>
+    <color name="mv">#B378FB</color>
+    <color name="device">#990AEE</color>
+    <color name="album">#2563FF</color>
+    <color name="singer">#FB9135</color>
+
+
 </resources>

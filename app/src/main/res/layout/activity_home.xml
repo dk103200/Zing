@@ -81,15 +81,6 @@
                 android:layout_height="wrap_content">
 
 
-            <!--                <GridView-->
-            <!--                        android:layout_marginTop="20dp"-->
-            <!--                        android:id="@+id/grid"-->
-            <!--                        android:layout_width="560dp"-->
-            <!--                        android:horizontalSpacing="20dp"-->
-            <!--                        android:verticalSpacing="20dp"-->
-            <!--                        android:layout_height="220dp"-->
-            <!--                        android:numColumns="3" />-->
-
 
         </androidx.recyclerview.widget.RecyclerView>
 

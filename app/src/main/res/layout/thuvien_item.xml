@@ -2,10 +2,10 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         android:layout_width="wrap_content"
-        android:layout_height="100dp"
-        android:layout_marginTop="20dp"
-        android:background="@drawable/border"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
         android:layout_marginRight="20dp"
+        android:background="@drawable/border"
         app:cardCornerRadius="20dp">
 
 
@@ -13,14 +13,28 @@
             android:layout_width="170dp"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            android:padding="20dp">
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:paddingBottom="10dp">
 
-        <ImageView
-                android:id="@+id/thuvien_title"
 
-                android:layout_width="25dp"
-                android:layout_height="25dp"
-                android:layout_marginBottom="10dp" />
+        <androidx.cardview.widget.CardView
+                android:id="@+id/cv_img"
+                android:layout_width="45dp"
+                android:layout_height="40dp"
+                android:layout_marginBottom="5dp"
+                app:cardCornerRadius="10dp">
+
+
+            <ImageView
+                    android:id="@+id/thuvien_title"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true" />
+
+
+        </androidx.cardview.widget.CardView>
 
 
         <TextView
@@ -30,7 +44,6 @@
                 android:text="Bài hát"
                 android:textColor="#000"
                 android:textSize="14sp"
-
                 android:textStyle="bold" />
 
     </LinearLayout>

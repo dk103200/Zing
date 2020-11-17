@@ -3,10 +3,21 @@ package com.zingmp3.thuvien;
 public class ThuVien {
     private int img;
     private String name;
+    private int color;
 
-    public ThuVien(int img, String name) {
+
+    public ThuVien(int img, String name, int color) {
         this.img = img;
         this.name = name;
+        this.color = color;
+    }
+
+    public int getColor() {
+        return color;
+    }
+
+    public void setColor(int color) {
+        this.color = color;
     }
 
     public int getImg() {

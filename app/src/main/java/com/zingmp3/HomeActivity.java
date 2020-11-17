@@ -40,12 +40,12 @@ public class HomeActivity extends AppCompatActivity {
 
         thuVienList = new ArrayList<>();
 
-        thuVienList.add(new ThuVien(R.drawable.ic_music, "Bài hát"));
-        thuVienList.add(new ThuVien(R.drawable.ic_music, "Upload"));
-        thuVienList.add(new ThuVien(R.drawable.ic_music, "MV"));
-        thuVienList.add(new ThuVien(R.drawable.ic_music, "Trên thiết bị"));
-        thuVienList.add(new ThuVien(R.drawable.ic_music, "Album"));
-        thuVienList.add(new ThuVien(R.drawable.ic_music, "Nghệ sĩ"));
+        thuVienList.add(new ThuVien(R.drawable.ic_album, "Bài hát",R.color.song));
+        thuVienList.add(new ThuVien(R.drawable.ic_cloud_computing, "Upload",R.color.upload));
+        thuVienList.add(new ThuVien(R.drawable.ic_mv, "MV",R.color.mv));
+        thuVienList.add(new ThuVien(R.drawable.ic_download, "Trên thiết bị",R.color.device));
+        thuVienList.add(new ThuVien(R.drawable.ic_song, "Album",R.color.album));
+        thuVienList.add(new ThuVien(R.drawable.ic_microphone, "Nghệ sĩ",R.color.singer));
         Adapter tvAdapter = new Adapter(HomeActivity.this, R.layout.thuvien_item, thuVienList);
         rcv_thuvien.setAdapter(tvAdapter);
 
