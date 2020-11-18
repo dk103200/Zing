@@ -1,15 +1,14 @@
 package com.zingmp3;
 
+import android.content.Intent;
 import android.os.Bundle;
-import android.widget.ArrayAdapter;
-import android.widget.EditText;
-import android.widget.GridView;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ListView;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.GridLayoutManager;
-import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.zingmp3.playlist.Playlist;
@@ -19,19 +18,28 @@ import com.zingmp3.thuvien.ThuVien;
 
 import java.util.ArrayList;
 
-public class HomeActivity extends AppCompatActivity {
+import de.hdodenhof.circleimageview.CircleImageView;
+
+public class PersonalActivity extends AppCompatActivity {
     ArrayList<ThuVien> thuVienList;
     ArrayList<Playlist> playlists;
 
     ListView lv_Playlist;
+    CircleImageView img_sign;
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_home);
-//        EditText search = findViewById(R.id.edt_search);
-//        search.setFocusableInTouchMode(true);
-//        search.clearFocus();
+        setContentView(R.layout.activity_personal);
+
+        img_sign = (CircleImageView) findViewById(R.id.img_sign);
+        img_sign.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                openSign();
+            }
+        });
+
         initThuVien();
         initPlaylist();
     }
@@ -51,7 +59,7 @@ public class HomeActivity extends AppCompatActivity {
         thuVienList.add(new ThuVien(R.drawable.ic_mv, "MV",R.color.mv));
 
         thuVienList.add(new ThuVien(R.drawable.ic_microphone, "Nghệ sĩ",R.color.singer));
-        Adapter tvAdapter = new Adapter(HomeActivity.this, R.layout.thuvien_item, thuVienList);
+        Adapter tvAdapter = new Adapter(PersonalActivity.this, R.layout.thuvien_item, thuVienList);
         rcv_thuvien.setAdapter(tvAdapter);
 
     }
@@ -65,7 +73,11 @@ public class HomeActivity extends AppCompatActivity {
         playlists.add(new Playlist(R.drawable.playlist3, "Cover Việt ngày nay"));
         playlists.add(new Playlist(R.drawable.playlist4, "BETTER: Thông Điệp Tình Yêu"));
         playlists.add(new Playlist(R.drawable.playlist5, "Thức Dậy Rap Thôi"));
-        PlaylistApdapter plAdapter = new PlaylistApdapter(HomeActivity.this, R.layout.playlist_item, playlists);
+        PlaylistApdapter plAdapter = new PlaylistApdapter(PersonalActivity.this, R.layout.playlist_item, playlists);
         lv_Playlist.setAdapter(plAdapter);
+    }
+    public void openSign(){
+        Intent myIntent = new Intent(PersonalActivity.this , LoginActivity.class);
+        startActivity(myIntent);
     }
 }
