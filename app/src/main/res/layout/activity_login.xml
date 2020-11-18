@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/background"
+        tools:context=".MainActivity">
+
+    <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+
+            android:layout_centerInParent="true">
+
+        <ImageView
+                android:id="@+id/logo"
+                android:layout_width="200dp"
+                android:layout_height="100dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="200dp"
+                android:layout_marginBottom="50dp"
+                android:src="@drawable/logo_zing" />
+
+        <EditText
+                android:id="@+id/user"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/logo"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/border"
+                android:hint="Zing ID"
+                android:paddingStart="20dp" />
+
+
+        <EditText
+                android:id="@+id/pass"
+                android:layout_width="250dp"
+                android:layout_height="40dp"
+                android:layout_below="@id/user"
+                android:layout_centerHorizontal="true"
+                android:layout_margin="10dp"
+                android:background="@drawable/border"
+                android:hint="Mật khẩu"
+                android:inputType="textPassword"
+                android:paddingStart="20dp" />
+
+
+        <Button
+                android:id="@+id/btn_sign"
+                android:layout_width="250dp"
+                android:layout_height="45dp"
+                android:layout_below="@id/pass"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/btn_gray"
+                android:maxLines="1"
+                android:text="Đăng nhập"
+                android:textColor="@color/design_default_color_primary_variant"
+                android:textSize="18sp" />
+
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+
+                android:layout_below="@id/btn_sign"
+                android:layout_marginTop="150dp"
+                android:layout_centerHorizontal="true">
+
+            <TextView
+                    android:id="@+id/tv_signup"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="10dp"
+                    android:text="Đăng kí"
+                    android:textColor="@color/white" />
+
+            <TextView
+                    android:id="@+id/tv_forget"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Quên mật khẩu"
+
+                    android:textColor="@color/white" />
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

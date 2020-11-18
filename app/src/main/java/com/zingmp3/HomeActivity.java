@@ -2,6 +2,7 @@ package com.zingmp3;
 
 import android.os.Bundle;
 import android.widget.ArrayAdapter;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ListView;
 
@@ -28,6 +29,9 @@ public class HomeActivity extends AppCompatActivity {
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_home);
+//        EditText search = findViewById(R.id.edt_search);
+//        search.setFocusableInTouchMode(true);
+//        search.clearFocus();
         initThuVien();
         initPlaylist();
     }
@@ -41,10 +45,11 @@ public class HomeActivity extends AppCompatActivity {
         thuVienList = new ArrayList<>();
 
         thuVienList.add(new ThuVien(R.drawable.ic_album, "Bài hát",R.color.song));
-        thuVienList.add(new ThuVien(R.drawable.ic_cloud_computing, "Upload",R.color.upload));
-        thuVienList.add(new ThuVien(R.drawable.ic_mv, "MV",R.color.mv));
         thuVienList.add(new ThuVien(R.drawable.ic_download, "Trên thiết bị",R.color.device));
+        thuVienList.add(new ThuVien(R.drawable.ic_cloud_computing, "Upload",R.color.upload));
         thuVienList.add(new ThuVien(R.drawable.ic_song, "Album",R.color.album));
+        thuVienList.add(new ThuVien(R.drawable.ic_mv, "MV",R.color.mv));
+
         thuVienList.add(new ThuVien(R.drawable.ic_microphone, "Nghệ sĩ",R.color.singer));
         Adapter tvAdapter = new Adapter(HomeActivity.this, R.layout.thuvien_item, thuVienList);
         rcv_thuvien.setAdapter(tvAdapter);
@@ -56,10 +61,10 @@ public class HomeActivity extends AppCompatActivity {
 
         playlists = new ArrayList<>();
         playlists.add(new Playlist(R.drawable.playlist1, "HIT-MAKER: Nổi Bật!"));
-        playlists.add(new Playlist(R.drawable.playlist1, "LA DI DA: Nghe Là Mê Say"));
-        playlists.add(new Playlist(R.drawable.playlist1, "Cover Việt ngày nay"));
-        playlists.add(new Playlist(R.drawable.playlist1, "BETTER: Thông Điệp Tình Yêu"));
-        playlists.add(new Playlist(R.drawable.playlist1, "Thức Dậy Rap Thôi"));
+        playlists.add(new Playlist(R.drawable.playlist2, "LA DI DA: Nghe Là Mê Say"));
+        playlists.add(new Playlist(R.drawable.playlist3, "Cover Việt ngày nay"));
+        playlists.add(new Playlist(R.drawable.playlist4, "BETTER: Thông Điệp Tình Yêu"));
+        playlists.add(new Playlist(R.drawable.playlist5, "Thức Dậy Rap Thôi"));
         PlaylistApdapter plAdapter = new PlaylistApdapter(HomeActivity.this, R.layout.playlist_item, playlists);
         lv_Playlist.setAdapter(plAdapter);
     }
