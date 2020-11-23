@@ -13,8 +13,7 @@
     <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:focusable="true"
-            android:focusableInTouchMode="true"
+
 
             android:paddingRight="20dp"
             android:orientation="vertical">
@@ -87,9 +86,6 @@
                 android:id="@+id/rcv_thuvien"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content">
-
-
-
         </androidx.recyclerview.widget.RecyclerView>
 
         <TextView

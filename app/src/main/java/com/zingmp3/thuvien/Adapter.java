@@ -55,22 +55,7 @@ public class Adapter extends RecyclerView.Adapter<Adapter.ViewHolder> {
         return thuVien.size();
     }
 
-//
-//    @Override
-//    public View getView(int position, View convertView, ViewGroup parent) {
-//        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
-//        convertView = inflater.inflate(layout,null,true);
-//
-//        TextView txtName = (TextView) convertView.findViewById(R.id.thuvien_name);
-//        txtName.setText(thuVien.get(position).getName());
-//
-//
-//        ImageView img = (ImageView) convertView.findViewById(R.id.thuvien_title);
-//        img.setImageResource(thuVien.get(position).getImg());
-//
-//        return convertView;
-//
-//    }
+
 
 
     public class ViewHolder extends RecyclerView.ViewHolder {

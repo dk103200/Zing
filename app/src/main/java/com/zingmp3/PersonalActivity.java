@@ -57,8 +57,8 @@ public class PersonalActivity extends AppCompatActivity {
         thuVienList.add(new ThuVien(R.drawable.ic_cloud_computing, "Upload",R.color.upload));
         thuVienList.add(new ThuVien(R.drawable.ic_song, "Album",R.color.album));
         thuVienList.add(new ThuVien(R.drawable.ic_mv, "MV",R.color.mv));
-
         thuVienList.add(new ThuVien(R.drawable.ic_microphone, "Nghệ sĩ",R.color.singer));
+
         Adapter tvAdapter = new Adapter(PersonalActivity.this, R.layout.thuvien_item, thuVienList);
         rcv_thuvien.setAdapter(tvAdapter);
 
